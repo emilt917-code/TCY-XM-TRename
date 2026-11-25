@@ -14,7 +14,7 @@ if not exist .venv (
     python -m venv .venv
 )
 .venv\Scripts\python -m pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
-.venv\Scripts\python -m PyInstaller --onefile --windowed --name UltraRename run.py
+.venv\Scripts\python -m PyInstaller --onefile --windowed --name TRename run.py
 echo.
 echo Build done: dist\UltraRename.exe
 pause

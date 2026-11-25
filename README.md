@@ -1,4 +1,4 @@
-# UltraRename
+# TRename
 
 BRU（Bulk Rename Utility）全量复刻 + 超越的批量重命名工具。Python + PySide6，跨平台（macOS / Windows）。
 
