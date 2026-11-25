@@ -26,7 +26,8 @@ COLOR_CONFLICT = QColor("#c62828")  # 冲突/覆盖
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("TRename v1.0.1 — 全能批量重命名")
+        from ultrarename import VERSION as _V
+        self.setWindowTitle(f"TRename v{_V} — 全能批量重命名")
         self.resize(1280, 800)
         self.pipeline = Pipeline([])
         import sys as _sys
