@@ -26,11 +26,15 @@ COLOR_CONFLICT = QColor("#c62828")  # 冲突/覆盖
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("TRename — 全能批量重命名")
+        self.setWindowTitle("TRename v1.0.1 — 全能批量重命名")
         self.resize(1280, 800)
         self.pipeline = Pipeline([])
+        import sys as _sys
+        base = (os.path.dirname(os.path.abspath(_sys.executable))
+                if getattr(_sys, "frozen", False)
+                else os.path.expanduser("~"))
         self.executor = RenameExecutor(
-            os.path.join(os.path.expanduser("~"), ".ultrarename_journal.jsonl"))
+            os.path.join(base, ".trrename_journal.jsonl"))
         self._current_dir = os.path.expanduser("~")
         self._dark = False
         self._build_ui()
